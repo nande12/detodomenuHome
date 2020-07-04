@@ -1,6 +1,50 @@
+//Main
+@import "reset";
 @import "fonts";
 @import "variables";
+@import "media-queries";
+
+//Components
+@import "components/header";
+@import "components/buttons";
+@import "components/steps";
 
 body {
   background: white;
+  font-family: $font-family-lato;
+}
+
+.dots {
+  position: relative;
+
+  &:before,
+  &:after,
+  span {
+    width: 10px;
+    height: 10px;
+    display: block;
+    border-radius: 50%;
+    background-color: white;
+  }
+
+  &:before,
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+  }
+
+  &:before {
+    left: 13px;
+  }
+
+  &:after {
+    left: 26px;
+  }
+}
+
+.page-content {
+  padding: $content-padding-mobile;
+  max-width: 316px;
 }

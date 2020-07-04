@@ -1,0 +1,40 @@
+.header {
+  padding-top: 16px;
+
+  .greeting {
+    width: 142px;
+    height: 74px;
+    background-color: var(--accent-color);
+    border-top-right-radius: 37px;
+    border-bottom-right-radius: 37px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    padding-left: $padding-left-mobile;
+    font-size: 36px;
+    font-weight: $font-weight-black;
+    margin-bottom: 50px;
+  }
+
+  .logo {
+    margin-bottom: 38px;
+    max-width: 316px;
+  }
+
+  .description {
+    max-width: $mobile-content-width;
+    font-size: 14px;
+    line-height: 20px;
+    color: $dark-gray-color;
+    margin-bottom: 60px;
+  }
+
+  .btn {
+    margin-bottom: 30px;
+  }
+
+  .arrow-btn {
+    margin-bottom: 40px;
+  }
+}

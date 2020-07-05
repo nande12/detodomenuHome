@@ -71,17 +71,17 @@
     top: 0;
     bottom: auto;
   }
-  25% {
+  33% {
     top: 0;
     bottom: auto;
     height: 8px;
   }
-  50% {
+  66% {
     top: 0;
     bottom: auto;
     height: 100%;
   }
-  75% {
+  100% {
     top: calc(100% - 8px);
     bottom: auto;
     height: 8px;

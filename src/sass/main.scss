@@ -14,6 +14,13 @@ body {
   font-family: $font-family-lato;
 }
 
+.section-title {
+  position: relative;
+  color: $dark-gray-color;
+  font-size: 26px;
+  font-weight: 700;
+}
+
 .dots {
   position: relative;
 
@@ -25,6 +32,15 @@ body {
     display: block;
     border-radius: 50%;
     background-color: white;
+  }
+
+  &.yellow-dots {
+
+    &:before,
+    &:after,
+    span {
+      background-color: var(--accent-color);
+    }
   }
 
   &:before,

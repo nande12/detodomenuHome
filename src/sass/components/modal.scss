@@ -1,11 +1,14 @@
 .modal {
   background-color: black;
-  padding-top: 160px;
+  padding-top: 20px;
   overflow: hidden;
-  position: relative;
+  position: fixed;
+  height: calc(100vh - 20px);
+  top: 0;
+  z-index: 10;
 
-  .page-content {
-    height: 100vh;
+  &.is-hidden {
+    display: none;
   }
 
   .modal-description {

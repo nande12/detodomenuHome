@@ -1,0 +1,50 @@
+.modal {
+  background-color: black;
+  padding-top: 160px;
+  overflow: hidden;
+  position: relative;
+
+  .page-content {
+    height: 100vh;
+  }
+
+  .modal-description {
+    color: white;
+    font-size: 48px;
+    font-weight: 900;
+    max-width: 375px;
+    margin-bottom: 80px;
+  }
+
+  .logo {
+    transform: skewY(-11deg);
+    background-color: white;
+    width: 100vw;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    padding: 0 20px;
+    height: 130px;
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 100%;
+      height: 50%;
+      background-color: white;
+      transform: skewY(11deg);
+    }
+
+    img {
+      transform: skewY(11deg);
+      position: relative;
+      top: 12px;
+    }
+  }
+}

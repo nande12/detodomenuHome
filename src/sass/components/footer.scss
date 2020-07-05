@@ -1,0 +1,38 @@
+.footer {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+
+  .illustration {
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 75%;
+    
+    .inner-wrapper {
+      position: relative;
+      transform: scale(2);
+      transform-origin: bottom;
+      position: absolute;
+      bottom: -3%;
+    }
+
+    .landscape {
+      width: 100%;
+    }   
+    .sign {
+      position: absolute;
+      bottom: 21%;
+      right: 23%;
+      transform: scale(0.65);
+    }
+  }
+  .disclaimer {
+    position: absolute;
+    width: 90%;
+    text-align: center;
+    bottom: 5px;
+    margin: 0;
+    padding: 0 15px;
+    font-size: 14px;
+  }
+}

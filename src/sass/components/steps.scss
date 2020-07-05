@@ -49,18 +49,16 @@
       content: '';
       display: block;
       width: 8px;
-      //height: 8px; //100%
       border-top-left-radius: 5px;
       border-top-right-radius: 5px;
       border-bottom-left-radius: 5px;
       border-bottom-right-radius: 5px;
       background-color: var(--accent-color);
       position: absolute;
-      //top: 0;
       left: -33px;
       font-size: 14px;
       animation-name: animate_steps;
-      animation-duration: 3.5s;
+      animation-duration: 2.5s;
       animation-timing-function: ease;
       animation-iteration-count: infinite;
     }

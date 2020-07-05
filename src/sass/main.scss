@@ -7,7 +7,11 @@
 //Components
 @import "components/header";
 @import "components/buttons";
+@import "components/buttons_social";
 @import "components/steps";
+@import "components/social-icons";
+@import "components/forms";
+@import "components/footer";
 
 body {
   background: white;
@@ -62,4 +66,14 @@ body {
 
 .page-content {
   padding: $content-padding-mobile;
+}
+
+.section-intro {
+  ul {
+    list-style: none;
+    padding: 0;
+    li {
+      padding-bottom: 10px;
+    }
+  }
 }

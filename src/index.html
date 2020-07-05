@@ -1,65 +1,120 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>De Todo Menú</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-</head>
-<body>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+  </head>
+  <body>
     <header class="header">
-        <div class="greeting">
-            <span class="dots">
-                <span></span>
-            </span>
-            <label>hola.</label>
+      <div class="greeting">
+        <span class="dots">
+          <span></span>
+        </span>
+        <label>hola.</label>
+      </div>
+      <div class="page-content">
+        <div class="logo">
+          <img src="assets/img/de-todo-menu-logo.svg" alt="De Todo Menu" />
         </div>
-        <div class="page-content">
-            <div class="logo"><img src="assets/img/de-todo-menu-logo.svg" alt="De Todo Menu"></div>
-            <p class="description">brindamos el servicio de menús digitales, y así, le damos la facilidad lorem ipsum dolor sit
-                amet, consectetur adipiscing elit. Donec finibus at ipsum sit amet iaculis.</p>
-            <button class="btn btn-black">queres mas info?</button>
-            <button class="arrow-btn" aria-label="scroll down"></button>
-        </div>
+        <p class="description">
+          brindamos el servicio de menús digitales, y así, le damos la facilidad
+          lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec finibus
+          at ipsum sit amet iaculis.
+        </p>
+        <button class="btn btn-black">queres mas info?</button>
+        <button class="arrow-btn" aria-label="scroll down"></button>
+      </div>
     </header>
 
     <section class="steps">
-        <div class="page-content">
-            <h2 class="section-title">
-                <span class="dots yellow-dots">
-                    <span></span>
-                </span>
-                <label>como funciona:</label>
-            </h2>
-            <ul class="steps-list">
-                <li class="step-item">
-                    <div class="step-title">código QR</div>
-                    <div class="step-description">lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec finibus at ipsum sit amet iaculis.</div>
-                </li>
-                <li class="step-item">
-                    <div class="step-title">orden</div>
-                    <div class="step-description">lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec finibus at ipsum sit
-                        amet iaculis.</div>
-                </li>
-                <li class="step-item">
-                    <div class="step-title">entrega</div>
-                    <div class="step-description">lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec finibus at ipsum sit
-                        amet iaculis.</div>
-                </li>
-            </ul>
-        </div>
+      <div class="page-content">
+        <h2 class="section-title">
+          <span class="dots yellow-dots">
+            <span></span>
+          </span>
+          <label>como funciona:</label>
+        </h2>
+        <ul class="steps-list">
+          <li class="step-item">
+            <div class="step-title">código QR</div>
+            <div class="step-description">
+              lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+              finibus at ipsum sit amet iaculis.
+            </div>
+          </li>
+          <li class="step-item">
+            <div class="step-title">orden</div>
+            <div class="step-description">
+              lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+              finibus at ipsum sit amet iaculis.
+            </div>
+          </li>
+          <li class="step-item">
+            <div class="step-title">entrega</div>
+            <div class="step-description">
+              lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+              finibus at ipsum sit amet iaculis.
+            </div>
+          </li>
+        </ul>
+      </div>
     </section>
 
     <section class="contact">
-        <div class="page-content">
-            <h2 class="section-title">
-                <span class="dots yellow-dots">
-                    <span></span>
-                </span>
-                <label>contáctenos:</label>
-            </h2>
+      <div class="page-content">
+        <h2 class="section-title">
+          <span class="dots yellow-dots">
+            <span></span>
+          </span>
+          <label>contáctenos:</label>
+        </h2>
+        <div class="section-intro">
+          <ul>
+            <li>tel: <a href="tel:+5068888888">(506) 888-8888</a></li>
+            <li>correo: <a href="mailto:info@detodo.menu">info@detodo.menu</a></li>
+          </ul>
         </div>
+        <div class="social-icons-container">
+          <a class="btn-social" href="https://facebook.com">f</a>
+          <a class="btn-social" href="https://instagram.com">i</a>
+          <a class="btn-social" href="https://twitter.com">t</a>
+        </div>
+        <form class="form-custom" id="contact-form">
+          <div class="input-group">
+            <label for="nombre">nombre</label>
+            <input type="text" id="nombre" required="true"/>
+          </div>
+          <div class="input-group">
+            <label for="telefono">teléfono</label>
+            <input type="tel" id="telefono" required="tel"/>
+          </div>
+          <div class="input-group">
+            <label for="telefono">correo</label>
+            <input type="email" id="correo" required="email" />
+          </div>
+          <div class="input-group">
+            <label for="comentario">comentario</label>
+            <textarea id="comentario" rows="3"></textarea>
+          </div>
+          <div class="input-group">
+            <button type="submit" class="btn btn-black">enviar</button>
+          </div>
+        </form>
+      </div>
     </section>
 
-    <footer>footer</footer>
-</body>
+    <footer class="footer">
+      <div class="illustration">
+        <div class="inner-wrapper">
+          <img class="landscape" src="assets/img/landscape.svg" />
+          <img class="sign" src="assets/img/rotulo-landscape.svg" />
+        </div>
+      </div>
+      <p class="disclaimer">© 2020 DeTodo.Menu. Todos los derechos reservados.</p>
+    </footer>
+  </body>
 </html>

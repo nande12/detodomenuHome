@@ -10,17 +10,28 @@
 		@include media(md) {
 			padding-bottom: 485px;
 		}
+		@include media(lg) {
+			padding-bottom: 250px;
+		}
     
     .inner-wrapper {
       position: relative;
       transform: scale(2);
       transform-origin: bottom;
       position: absolute;
-      bottom: -3%;
+			bottom: -3%;
+			@include media(lg) {
+				transform: scale(1);
+				text-align: center;
+				width: 100%;
+			}
     }
 
     .landscape {
-      width: 100%;
+			width: 100%;
+			@include media(lg) {
+				width: auto;
+			}
     }   
     .sign {
       position: absolute;
@@ -75,6 +86,9 @@
 	@include media(md) {
 		bottom: 200px;
 	}
+	@include media(lg) {
+		bottom: 90px;
+	}
 	
 	animation-name: fly-right-one;
 	animation-timing-function: linear;
@@ -83,11 +97,18 @@
 	&--one {
 		animation-duration: 9s;
 		animation-delay: 0;
+		@include media(lg) {
+			animation-duration: 14s;
+		}
+	
 	}
 	
 	&--two {
 		animation-duration: 12s;
 		animation-delay: 1s;
+		@include media(lg) {
+			animation-duration: 17s;
+		}
 	}
 	
 }

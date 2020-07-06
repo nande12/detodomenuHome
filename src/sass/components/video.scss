@@ -5,6 +5,9 @@
   @include media(md) {
     display: block;
   }
+  @include media(lg) {
+    max-width: 300px;
+  }
 
   img {
     width: 100%;
@@ -17,4 +20,9 @@ video {
   left: 20px;
   top: 30px;
   outline: 0;
+  @include media(lg) {
+    width: 241px;
+    left: 30px;
+    top: 52px;
+  }
 }

@@ -6,6 +6,24 @@
   height: calc(100vh - 20px);
   top: 0;
   z-index: 10;
+  width: 100%;
+  @include media(lg) {
+    left: 0;
+  }
+
+  .page-content {
+    @include media(lg) {
+      display: flex;
+      max-width: 1200px;
+      margin: auto;
+    }
+  }
+
+  .modal-inner {
+    @include media(lg) {
+      width: 50%;
+    }
+  }
 
   &.is-hidden {
     display: none;
@@ -31,6 +49,14 @@
     margin-right: -50vw;
     padding: 0 20px;
     height: 130px;
+    @include media(md) {
+      transform: skewY(-8deg);
+      text-align: right;
+      height: 130px;
+    }
+    @include media(lg) {
+      display: none;
+    }
 
     &:before {
       content: '';
@@ -42,12 +68,27 @@
       height: 50%;
       background-color: white;
       transform: skewY(11deg);
+      @include media(md) {
+        transform: skewY(8deg);
+        height: 63%;
+      }
+      @include media(lg) {
+        transform: skewY(0);
+      }
     }
 
     img {
       transform: skewY(11deg);
       position: relative;
       top: 12px;
+      @include media(md) {
+        transform: skewY(8deg);
+        top: 45px;
+        right: 50px;
+      }
+      @include media(lg) {
+        transform: skewY(0);
+      }
     }
   }
 }

@@ -21,6 +21,11 @@ body {
   font-family: $font-family-lato;
 }
 
+.main-wrapper {
+  max-width: 1200px;
+  margin: auto;
+}
+
 a {
   color: black;
   text-decoration: none;

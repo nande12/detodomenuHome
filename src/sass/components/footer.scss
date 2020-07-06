@@ -6,7 +6,10 @@
   .illustration {
     overflow: hidden;
     position: relative;
-    padding-bottom: 75%;
+		padding-bottom: 75%;
+		@include media(md) {
+			padding-bottom: 485px;
+		}
     
     .inner-wrapper {
       position: relative;
@@ -68,7 +71,10 @@
 	left: -10%;
 	transform: scale(0) translateX(-10vw);
   will-change: transform;
-  z-index: 10;
+	z-index: 10;
+	@include media(md) {
+		bottom: 200px;
+	}
 	
 	animation-name: fly-right-one;
 	animation-timing-function: linear;

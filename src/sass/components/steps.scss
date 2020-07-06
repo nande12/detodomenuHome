@@ -13,6 +13,11 @@
     margin: 0;
     padding-left: 41px;
     list-style: none;
+    @include media(md) {
+      display: flex;
+      justify-content: space-between;
+      max-width: none;
+    }
   }
 
   .step-item {
@@ -61,6 +66,11 @@
       animation-duration: 2.5s;
       animation-timing-function: ease;
       animation-iteration-count: infinite;
+      @include media(md) {
+        animation-name: animate_steps_horizontal;
+        height: 3px;
+        top: -12px;
+      }
     }
   }
 }
@@ -83,5 +93,26 @@
     top: calc(100% - 8px);
     bottom: auto;
     height: 8px;
+  }
+}
+@keyframes animate_steps_horizontal {
+  0% {
+    left: 0;
+    right: auto;
+  }
+  33% {
+    left: 0;
+    right: auto;
+    width: 8px;
+  }
+  66% {
+    left: 0;
+    right: auto;
+    width: 100%;
+  }
+  100% {
+    left: calc(100% - 8px);
+    right: auto;
+    width: 8px;
   }
 }

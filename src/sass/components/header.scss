@@ -40,5 +40,30 @@
 
   .page-content {
     padding-right: 0;
+    @include media(md) {
+      position: relative;
+      padding-right: 40px;
+      padding-left: 40px;
+
+      &:before {
+        content: '';
+        display: block;
+        background-color: $light-gray-color;
+        width: 460px;
+        height: calc(100% + 40px);
+        position: absolute;
+        z-index: -1;
+        left: 20px;
+        top: -20px;
+      }
+    }
+  }
+
+  .video-wrapper {
+    @include media(md) {
+      position: absolute;
+      top: 0;
+      left: 400px;
+    }
   }
 }

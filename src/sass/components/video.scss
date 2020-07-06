@@ -1,0 +1,20 @@
+.video-wrapper {
+  position: relative;
+  display: none;
+  max-width: 200px;
+  @include media(md) {
+    display: block;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+video {
+  position: absolute;
+  width: 160px;
+  left: 20px;
+  top: 30px;
+  outline: 0;
+}

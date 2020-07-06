@@ -58,6 +58,18 @@ module.exports = (env, options) => ({
         ]
       },
       {
+        test: /\.(mp4|ogg)$/,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "[name].[ext]",
+              outputPath: "video/"
+            }
+          }
+        ]
+      },
+      {
         test: /\.(html)$/,
         use: {
           loader: "html-srcsets-loader",

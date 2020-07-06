@@ -39,6 +39,9 @@
 
   .arrow-btn {
     margin-bottom: 40px;
+    @include media(lg) {
+      margin-top: 80px;
+    }
   }
 
   .page-content {

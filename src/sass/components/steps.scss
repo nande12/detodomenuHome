@@ -2,6 +2,10 @@
   background-color: $light-gray-color;
   padding-top: 25px;
   padding-bottom: 25px;
+  @include media(lg) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
 
   .section-title {
     padding-bottom: 25px;
@@ -49,6 +53,9 @@
     position: relative;
     max-width: 165px;
     font-size: 14px;
+    @include media(md) {
+      max-width: 250px;
+    }
 
     &:before {
       content: '';

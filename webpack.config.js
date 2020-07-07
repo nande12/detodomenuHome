@@ -126,7 +126,7 @@ module.exports = (env, options) => ({
     ]
   },
   output: {
-    filename: "[name].js",
+    filename: "js/[name].[contenthash].js",
     path: path.resolve(__dirname, "dist"),
     publicPath: ""
   }

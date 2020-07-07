@@ -18,8 +18,11 @@
   }
 
   .logo {
-    margin-bottom: 38px;
     max-width: 316px;
+    margin: 0 auto 38px;
+    @include media(md) {
+      margin: 0 0 38px;
+    }
   }
 
   .description {
@@ -27,14 +30,22 @@
     font-size: 14px;
     line-height: 20px;
     color: $medium-gray-color;
+    margin: auto;
     margin-bottom: 60px;
+    @include media(md) {
+      margin: 0 0 60px;
+    }
     @include media(lg) {
       max-width: $desktop-content-width;
     }
   }
 
   .btn {
+    margin: auto;
     margin-bottom: 30px;
+    @include media(md) {
+      margin: 0 0 30px;
+    }
   }
 
   .arrow-btn {
@@ -46,6 +57,7 @@
 
   .page-content {
     padding-right: 0;
+    padding-left: 0;
     @include media(md) {
       position: relative;
       padding-right: 40px;

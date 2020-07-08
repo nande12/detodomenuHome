@@ -94,21 +94,22 @@
             <a class="btn-social" href="https://twitter.com">t</a>
           </div>
           <form class="form-custom" id="contact-form">
+            <input id="subject" type="hidden" value="De Todo Menu, Home Email"/>
             <div class="input-group">
-              <label for="nombre">nombre</label>
-              <input type="text" id="nombre" required="true" />
+              <label for="name">nombre</label>
+              <input type="text" id="name" required="true" name="name"/>
             </div>
             <div class="input-group">
-              <label for="telefono">teléfono</label>
-              <input type="tel" id="telefono" required="tel" />
+              <label for="phone">teléfono</label>
+              <input type="tel" id="phone" required="tel" name="phone"/>
             </div>
             <div class="input-group">
-              <label for="telefono">correo</label>
-              <input type="email" id="correo" required="email" />
+              <label for="email">correo</label>
+              <input type="email" id="email" required="email" name="email"/>
             </div>
             <div class="input-group">
-              <label for="comentario">comentario</label>
-              <textarea id="comentario" rows="3"></textarea>
+              <label for="message">comentario</label>
+              <textarea id="message" rows="3" name="message"></textarea>
             </div>
             <div class="input-group form-button">
               <button type="submit" class="btn btn-black submit-btn">enviar</button>
@@ -144,6 +145,7 @@
       </div>
     </div>
 
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>-->
   </body>
 
 </html>

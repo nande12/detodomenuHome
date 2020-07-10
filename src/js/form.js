@@ -2,7 +2,6 @@ $(document).ready(function () {
   
   $("form .submit-btn").click(function (e) {
     e.preventDefault();
-    //var newNode = JSON.stringify(jQuery('#contact-form').serializeArray());
     var formName = $('#name').val(),
         formEmail = $('#email').val(),
       formSubject = $('#subject').val(),
@@ -12,6 +11,7 @@ $(document).ready(function () {
         theURL = "";
 
     var newNode = {
+      "uid": [{ value: 0 }],
       "contact_form": [{"target_id": "contact"}],
       "name": [{ "value": formName}],
       "mail": [{ "value": formEmail}],
@@ -20,15 +20,9 @@ $(document).ready(function () {
       "field_phone": [{ "value": formPhone}]
     }
 
-    // if (domainUrl == 'dev-menus-birradev.pantheonsite.io') {
-    //   theURL = 'http://dev-menus-birradev.pantheonsite.io/'
-    // }else {
-    //   theURL = 'detodo.menu'
-    // }
-
     function getCsrfToken(callback) {
       jQuery
-        .get('http://dev-menus-birradev.pantheonsite.io/session/token')
+        .get('/session/token')
         .done(function (data) {
           var csrfToken = data;
           callback(csrfToken);
@@ -37,10 +31,10 @@ $(document).ready(function () {
 
     function postNode(csrfToken, node) {
       jQuery.ajax({
-        url: 'http://dev-menus-birradev.pantheonsite.io/entity/contact_message?_format=json',
+        url: '/entity/contact_message?_format=json',
         method: 'POST',
         headers: {
-          'Content-Type': 'application/hal+json',
+          'Content-Type': 'application/json',
           'X-CSRF-Token': csrfToken
         },
         data: JSON.stringify(node),

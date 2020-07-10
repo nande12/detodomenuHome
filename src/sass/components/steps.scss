@@ -21,11 +21,13 @@
       display: flex;
       justify-content: space-between;
       max-width: none;
+      flex-wrap: wrap;
     }
   }
 
   .step-item {
     margin-bottom: 14px;
+    width: 50%;
   }
 
   .step-title {

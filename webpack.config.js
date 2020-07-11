@@ -11,11 +11,11 @@ const globSync = require("glob").sync;
 module.exports = (env, options) => ({
   entry: ["./src/index.js"],
   devServer: {
-    contentBase: "./dist"
+    contentBase: "./dist",
   },
   devtool: "source-map",
   node: {
-    fs: 'empty'
+    fs: "empty",
   },
   module: {
     rules: [
@@ -27,23 +27,32 @@ module.exports = (env, options) => ({
             : {
                 loader: MiniCssExtractPlugin.loader,
                 options: {
-                  publicPath: "../"
-                }
+                  publicPath: "../",
+                },
               },
           "css-loader",
           {
-            loader: 'postcss-loader', 
+            loader: "postcss-loader",
             options: {
               plugins: function () {
-                return [
-                  require('precss'),
-                  require('autoprefixer')
-                ];
-              }
-            }
+                return [require("precss"), require("autoprefixer")];
+              },
+            },
           },
-          "sass-loader"
-        ]
+          "sass-loader",
+        ],
+      },
+      {
+        test: /\.(ttf)$/,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "[name].[ext]",
+              outputPath: "fonts/",
+            },
+          },
+        ],
       },
       {
         test: /\.(png|jpg|gif|svg)$/,
@@ -52,10 +61,10 @@ module.exports = (env, options) => ({
             loader: "file-loader",
             options: {
               name: "[name].[ext]",
-              outputPath: "img/"
-            }
-          }
-        ]
+              outputPath: "img/",
+            },
+          },
+        ],
       },
       {
         test: /\.(mp4|ogg)$/,
@@ -64,19 +73,19 @@ module.exports = (env, options) => ({
             loader: "file-loader",
             options: {
               name: "[name].[ext]",
-              outputPath: "video/"
-            }
-          }
-        ]
+              outputPath: "video/",
+            },
+          },
+        ],
       },
       {
         test: /\.(html)$/,
         use: {
           loader: "html-srcsets-loader",
           options: {
-            attrs: [":src", ':srcset']
-          }
-        }
+            attrs: [":src", ":srcset"],
+          },
+        },
       },
       {
         test: /\.js$/,
@@ -84,22 +93,22 @@ module.exports = (env, options) => ({
         use: {
           loader: "babel-loader",
           options: {
-            presets: ["@babel/preset-env"]
-          }
-        }
-      }
-    ]
+            presets: ["@babel/preset-env"],
+          },
+        },
+      },
+    ],
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "css/[name].[contenthash].css"
+      filename: "css/[name].[contenthash].css",
     }),
     new CleanWebpackPlugin(["dist"]),
-    ...globSync("src/**/*.html").map(fileName => {
+    ...globSync("src/**/*.html").map((fileName) => {
       return new HtmlWebpackPlugin({
         template: fileName,
         inject: "body",
-        filename: fileName.replace("src/", "")
+        filename: fileName.replace("src/", ""),
       });
     }),
     new webpack.ProvidePlugin({
@@ -108,26 +117,26 @@ module.exports = (env, options) => ({
       "window.jQuery": "jquery",
       Popper: ["popper.js", "default"],
       Util: "exports-loader?Util!bootstrap/js/dist/util",
-      Dropdown: "exports-loader?Dropdown!bootstrap/js/dist/dropdown"
-    })
+      Dropdown: "exports-loader?Dropdown!bootstrap/js/dist/dropdown",
+    }),
   ],
   optimization: {
     minimizer: [
-        new UglifyJsPlugin({
-            cache: true,
-            parallel: true,
-            sourceMap: false,
-            extractComments: false
-        }),
-        new CompressionPlugin({
-            test: /\.js$|\.css(\?.*)?$/i
-        }),
-        new OptimizeCSSAssetsPlugin({})
-    ]
+      new UglifyJsPlugin({
+        cache: true,
+        parallel: true,
+        sourceMap: false,
+        extractComments: false,
+      }),
+      new CompressionPlugin({
+        test: /\.js$|\.css(\?.*)?$/i,
+      }),
+      new OptimizeCSSAssetsPlugin({}),
+    ],
   },
   output: {
     filename: "js/[name].[contenthash].js",
     path: path.resolve(__dirname, "dist"),
-    publicPath: ""
-  }
+    publicPath: "",
+  },
 });

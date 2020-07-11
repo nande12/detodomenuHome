@@ -47,6 +47,11 @@
   outline: none;
   position: relative;
 
+  span {
+    position: relative;
+    top: 2px;
+  }
+
   &:hover,
   &:focus {
 

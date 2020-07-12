@@ -15,6 +15,9 @@
 @import "components/modal";
 @import "components/video";
 
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   background: white;

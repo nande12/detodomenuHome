@@ -102,7 +102,7 @@ $(document).ready(function () {
 
       function getCsrfToken(callback) { //https://cors-anywhere.herokuapp.com/
         jQuery
-          .get('https://cors-anywhere.herokuapp.com/http://dev-menus-birradev.pantheonsite.io/session/token')
+          .get('/session/token')
           .done(function (data) {
             var csrfToken = data;
             callback(csrfToken);
@@ -111,7 +111,7 @@ $(document).ready(function () {
 
       function postNode(csrfToken, node) {
         jQuery.ajax({
-          url: 'https://cors-anywhere.herokuapp.com/http://dev-menus-birradev.pantheonsite.io/entity/contact_message?_format=json',
+          url: '/entity/contact_message?_format=json',
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

@@ -6,6 +6,13 @@
     margin-bottom: 25px;
     display: flex;
     flex-direction: column;
+
+    &.show-error {
+
+      .error-msj {
+        display: block;
+      }
+    }
   }
 
   .form-button {
@@ -14,6 +21,7 @@
 
   button {
     margin: 0 auto;
+    position: relative;
   }
 
   label { 
@@ -21,6 +29,13 @@
     font-weight: bold;
     font-size: 16px;
     margin-bottom: 5px;
+  }
+
+  .error-msj {
+    font-weight: 500;
+    color: red;
+    font-size: 12px;
+    display: none;
   }
 
   input,
@@ -33,5 +48,95 @@
       border-bottom-color: var(--accent-color);
       outline: none;
     }
+  }
+}
+
+.error-message {
+  box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.2);
+  max-width: 375px;
+  display: none;
+  margin: auto;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  .close {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    width: 15px;
+    height: 15px;
+    opacity: 0.3;
+    cursor: pointer;
+
+    &::before, &::after {
+      position: absolute;
+      left: 0;
+      content: '';
+      height: 15px;
+      width: 2px;
+      background-color: #333;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  img {
+    margin-right: 20px;
+  }
+  span {
+    font-size: 20px;
+  }
+}
+
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  margin-left: 10%;
+  transform: translate3d(-50%, -50%, 0);
+  display: none;
+  .dot {
+    width: 24px;
+    height: 24px;
+    background: #3ac;
+    border-radius: 100%;
+    display: inline-block;
+    animation: slide 1s infinite;
+    background-color: var(--accent-color);
+  }
+  .dot:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+  .dot:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  .dot:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+  .dot:nth-child(4) {
+    animation-delay: 0.4s;
+  }
+  .dot:nth-child(5) {
+    animation-delay: 0.5s;
+  }
+}
+
+@keyframes slide {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.3;
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(1);
   }
 }

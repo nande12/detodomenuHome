@@ -102,22 +102,40 @@
             <input id="subject" type="hidden" value="De Todo Menu, Home Email"/>
             <div class="input-group">
               <label for="name">nombre</label>
-              <input type="text" id="name" required="true" name="name"/>
+              <span class="error-msj">por favor, introduzca su nombre</span>
+              <input type="text" id="name" name="name" required/>
             </div>
             <div class="input-group">
               <label for="phone">teléfono</label>
-              <input type="tel" id="phone" required="tel" name="phone"/>
+              <span class="error-msj">por favor, introduzca su teléfono</span>
+              <input type="tel" id="phone" name="phone" required/>
             </div>
             <div class="input-group">
               <label for="email">correo</label>
-              <input type="email" id="email" required="email" name="email"/>
+              <span class="error-msj">por favor, introduzca un correo válido</span>
+              <input type="email" id="email" name="email" required/>
             </div>
             <div class="input-group">
               <label for="message">comentario</label>
-              <textarea id="message" rows="3" name="message"></textarea>
+              <span class="error-msj">por favor, introduzca un comentario</span>
+              <textarea id="message" rows="3" name="message" required></textarea>
             </div>
             <div class="input-group form-button">
-              <button type="submit" class="btn btn-black submit-btn">enviar</button>
+              <button type="submit" class="btn btn-black submit-btn">
+                enviar
+                <div class="loader">
+                  <div class="dot"></div>
+                  <div class="dot"></div>
+                  <div class="dot"></div>
+                  <div class="dot"></div>
+                  <div class="dot"></div>
+                </div>
+              </button>
+            </div>
+            <div class="error-message">
+              <div class="close"></div>
+              <img src="assets/img/fire.svg" />
+              <span>ocurrió un error, por favor intente mas tarde!</span>
             </div>
           </form>
         </div>
